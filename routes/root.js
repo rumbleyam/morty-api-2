@@ -6,6 +6,7 @@ const Joi = require('joi');
 const Boom = require('boom');
 
 const UserService = require.main.require('./services/user');
+const MiddlewareService = require.main.require('./services/middleware');
 
 /**
  * @object
@@ -48,10 +49,8 @@ module.exports = prefix => [
     path: `${prefix}/register`,
     handler: async (request) => {
       try {
-        await UserService.register(request.payload);
-        return {
-          message: 'User created',
-        };
+        const token = await UserService.register(request.payload);
+        return { token };
       } catch (err) {
         if (err.code === '23505') {
           return Boom.forbidden('Email provided is in use');
@@ -96,7 +95,7 @@ module.exports = prefix => [
     path: `${prefix}/whoami`,
     handler: async (request) => {
       try {
-        const user = await UserService.getOneById(request.auth.credentials.id);
+        const user = await UserService.findOneById(request.auth.credentials.id);
         return user;
       } catch (err) {
         // If token is valid, user should exist

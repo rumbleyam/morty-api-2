@@ -57,3 +57,33 @@ exports.validateToken = async (decoded) => {
     return { isValid: false };
   }
 };
+
+/**
+ * Determines if a user has admin permissions
+ * @param {Number} id Id of user to look up
+ * @returns {Boolean} If the user has admin permissions
+ */
+exports.hasAdminPermissions = async (id) => {
+  const user = await UserService.findOneById(id);
+  return user.role === 'Admin';
+};
+
+/**
+ * Determines if a user has editor permissions
+ * @param {Number} id Id of user to look up
+ * @returns {Boolean} If the user has editor permissions
+ */
+exports.hasEditorPermissions = async (id) => {
+  const user = await UserService.findOneById(id);
+  return user.role === 'Editor' || user.role === 'Admin';
+};
+
+/**
+ * Determines if a user has author permissions
+ * @param {Number} id Id of user to look up
+ * @returns {Boolean} If the user has author permissions
+ */
+exports.hasAuthorPermissions = async (id) => {
+  const user = await UserService.findOneById(id);
+  return user.role === 'Author' || user.role === 'Editor' || user.role === 'Admin';
+};
