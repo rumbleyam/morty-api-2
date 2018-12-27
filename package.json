@@ -1,0 +1,37 @@
+{
+  "name": "morty-rest-api-2",
+  "version": "1.0.0",
+  "description": "A simple Node CMS designed to be consumed by any client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:rumbleyam/morty-api-2.git"
+  },
+  "author": "Andrew Rumbley",
+  "license": "MIT",
+  "homepage": "https://github.com/rumbleyam/morty-api-2#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "bluebird": "^3.5.1",
+    "boom": "^7.3.0",
+    "hapi": "^17.8.1",
+    "hapi-auth-jwt2": "^8.2.0",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.2.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0",
+    "pg": "^7.7.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "js-yaml": "^3.12.0"
+  }
+}

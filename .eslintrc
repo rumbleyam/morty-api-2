@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "object-curly-newline": "off",
+    "no-useless-concat": "off",
+    "no-underscore-dangle": "off",
+    "global-require": "off",
+    "no-console": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "no-case-declarations": "off",
+    "no-plusplus": "off"
+  }
+}
