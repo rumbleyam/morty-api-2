@@ -7,7 +7,7 @@ Morty is designed to be a client agnostic CMS REST API.  Target functionality is
 Morty runs on Node.js utilizing Hapi and PostgreSQL.  No ORM is in play here to reduce overhead and provide a high level of control.
 
 * Install node dependencies `npm install` 
-* Install (https://www.postgresql.org/)[PostgreSQL]
+* Install [PostgreSQL](https://www.postgresql.org/)
 * Create a Postgres database for the project, the default is "morty"
 * Copy the `config.example.json` file to `config.json` and change any necessary values (**DO NOT** go with the default key)
 
