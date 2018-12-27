@@ -12,15 +12,15 @@ Create a Postgres database for the project, the default is "morty"
 Copy the `config.example.json` file to `config.json` and change any necessary values (**DO NOT** go with the default key)
 
 ## Config Values
-`port`: Which port the server should run on.
-`enableClustering`: If set to true, the node process will fork a worker for each available CPU on the machine.  Other clustering solutions probably do a better job.
-`database.user`: User to connect to the database with.
-`database.password`: Connecting user's password.
-`database.host`: Where the database server is located.
-`database.database`: Which database to connect to.
-`database.port`: Which port the database server is running on.
-`jwtSecret`: An example value of a secret to use to sign your JWTs with.  **Be sure to change this!**
-`jwtAlgorithm`: Which algorithm to use when signing JWTs.
+* `port`: Which port the server should run on.
+* `enableClustering`: If set to true, the node process will fork a worker for each available CPU on the machine.  Other clustering solutions probably do a better job.
+* `database.user`: User to connect to the database with.
+* `database.password`: Connecting user's password.
+* `database.host`: Where the database server is located.
+* `database.database`: Which database to connect to.
+* `database.port`: Which port the database server is running on.
+* `jwtSecret`: An example value of a secret to use to sign your JWTs with.  **Be sure to change this!**
+* `jwtAlgorithm`: Which algorithm to use when signing JWTs.
 
 ## Roadmap
 * Users and user roles

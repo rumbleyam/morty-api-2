@@ -8,7 +8,6 @@
     "database": "morty",
     "port": 5432
   },
-  "serverName" : "Morty REST API",
   "jwtSecret" : "OmICRUShZZcUchOczQspgiGOMrVpNV07O3G4h6TzBCuqt6rXNh1S46ufATjm",
   "jwtAlgorithm" : "HS256",
   "jwtExpiry" : "14d",
