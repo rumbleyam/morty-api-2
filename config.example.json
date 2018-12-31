@@ -11,5 +11,21 @@
   "jwtSecret" : "OmICRUShZZcUchOczQspgiGOMrVpNV07O3G4h6TzBCuqt6rXNh1S46ufATjm",
   "jwtAlgorithm" : "HS256",
   "jwtExpiry" : "14d",
-  "bcryptSaltRounds" : 10
+  "bcryptSaltRounds" : 10,
+  "defaultCategories": [
+    {
+      "name": "Blog",
+      "description": ""
+    },
+    {
+      "name": "Portfolio",
+      "description": ""
+    }
+  ],
+  "defaultRoles": [
+    "Admin",
+    "Editor",
+    "Author",
+    "Commenter"
+  ]
 }
