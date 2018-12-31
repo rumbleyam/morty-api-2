@@ -107,7 +107,10 @@ module.exports = prefix => [
     },
     options: {
       cors: true,
-      auth: false,
+      auth: {
+        strategy: 'jwt',
+        mode: 'optional',
+      },
       validate: {
         query: _schemas.search,
       },
