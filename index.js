@@ -15,12 +15,19 @@ const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 
 const AuthenticationService = require.main.require('./services/authentication');
+const UserService = require.main.require('./services/user');
+const CategoryService = require.main.require('./services/category');
+const PostService = require.main.require('./services/post');
 const config = require('./config');
 const routeBuilder = require('./routes');
 
 // Create server
 const server = Hapi.server({
   port: config.port,
+  router: {
+    isCaseSensitive: false,
+    stripTrailingSlash: true,
+  },
 });
 
 async function startAPI() {
@@ -37,8 +44,17 @@ async function startAPI() {
   const routes = await routeBuilder();
   server.route(routes);
 
+  // Initialize tables
+  await initializeTables();
+
   await server.start();
   return server;
+}
+
+async function initializeTables() {
+  await UserService.init();
+  await CategoryService.init();
+  await PostService.init();
 }
 
 function init() {

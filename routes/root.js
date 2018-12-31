@@ -6,7 +6,6 @@ const Joi = require('joi');
 const Boom = require('boom');
 
 const UserService = require.main.require('./services/user');
-const MiddlewareService = require.main.require('./services/middleware');
 
 /**
  * @object

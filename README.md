@@ -8,6 +8,8 @@ Morty runs on Node.js utilizing Hapi and PostgreSQL.  No ORM is in play here to 
 
 * Install node dependencies `npm install` 
 * Install [PostgreSQL](https://www.postgresql.org/)
+* Install the `pg_trgm` extension: `CREATE EXTENSION pg_trgm;`
+* Install the `citext` extension: `CREATE EXTENSION citext;`
 * Create a Postgres database for the project, the default is "morty"
 * Copy the `config.example.json` file to `config.json` and change any necessary values (**DO NOT** go with the default key)
 
