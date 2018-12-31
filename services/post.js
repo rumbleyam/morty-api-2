@@ -3,6 +3,7 @@
  *
  * Manages all actions related to Posts
  */
+const _ = require('lodash');
 
 const database = require.main.require('./services/database');
 
@@ -228,7 +229,7 @@ exports.search = async (
     where.push(`category = $${values.length}`);
   }
 
-  if (published) {
+  if (_.isBoolean(published)) {
     values.push(published);
     where.push(`published = $${values.length}`);
   }
